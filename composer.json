@@ -1,0 +1,39 @@
+{
+    "name": "openmage/magento-demo",
+    "description": "a Magento demo project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Flyingmana",
+            "email": "flyingmana@googlemail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/AydinHassan/magento-core-composer-installer"
+        },
+        {
+            "type": "package",
+            "package": {
+                "name": "openmage/magento-lts",
+                "version": "dev-1.9.1",
+                "type": "magento-core",
+                "dist": {
+                    "url": "https://github.com/OpenMage/magento-lts/archive/1.9.1.zip",
+                    "type": "zip"
+                },
+                "autoload": {
+                    "classmap": []
+                }
+            }
+        }
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "@beta",
+        "openmage/magento-lts": "dev-1.9.1"
+    },
+    "extra": {
+        "magento-root-dir": "build"
+    }
+}
