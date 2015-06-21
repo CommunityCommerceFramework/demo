@@ -1,0 +1,106 @@
+prepare_install.sh
+
+import sample sql file into database
+
+now run same install as for empty
+
+n98-magerun.phar install --noDownload --installationFolder="./" --root-dir="./build/" --dbHost="127.0.0.1" --dbPort="9922" --dbUser="testuser" --dbPass="testpassword" --dbName="magento_demo" --forceUseDb="true" --baseUrl="http://127.0.0.5:8080/" -vvv
+Load dist config
+Search for Magento in folder /work/openMage/Demo/build
+Found Magento in folder /work/openMage/Demo/build
+DEBUG
+
+
+  Magento Installation
+
+
+Please enter the session save: [files]:
+Please enter the admin frontname: [admin]
+Please enter the default currency code: [EUR]:
+Please enter the locale code: [de_DE]:
+Please enter the timezone: [Europe/Berlin]:
+Please enter the admin username: [admin]:
+Please enter the admin password: [password123]:
+Please enter the admin's firstname: [John]:
+Please enter the admin's lastname: [Doe]:
+Please enter the admin's email: [john.doe@example.com]:
+Start installation process.
+/usr/bin/env php -f '/work/openMage/Demo/build/install.php' -- --license_agreement_accepted 'yes' --locale 'de_DE' --timezone 'Europe/Berlin' --db_host '127.0.0.1:9922' --db_name 'magento_demo' --db_user 'testuser' --db_pass 'testpassword' --db_prefix '' --url 'http://127.0.0.5:8080/' --use_rewrites 'yes' --use_secure 'no' --secure_base_url '' --use_secure_admin 'no' --admin_username 'admin' --admin_lastname 'Doe' --admin_firstname 'John' --admin_email 'john.doe@example.com' --admin_password 'password123' --session_save 'files' --admin_frontname 'admin' --backend_frontname 'admin' --default_currency 'EUR' --skip_url_validation 'yes'
+Successfully installed Magento
+Encryption Key: 6fc61869ef4957f996ffa399e26553ab
+Write BaseURL to .htaccess file? [n]:
+Reindex all after installation
+DEBUG
+Successfully reindexed catalog_product_attribute
+Successfully reindexed catalog_product_price
+Successfully reindexed catalog_url
+Successfully reindexed catalog_product_flat
+Successfully reindexed catalog_category_flat
+Successfully reindexed catalog_category_product
+Successfully reindexed catalogsearch_fulltext
+Successfully reindexed cataloginventory_stock
+Successfully reindexed tag_summary
+DEBUG
+
+
+                            SETTINGS
+
+
+✔ Secure BaseURL of Store: default OK
+✔ Unsecure BaseURL of Store: default OK
+✔ Cookie Domain (secure) of Store: default OK - No domain set
+✔ Cookie Domain (unsecure) of Store: default OK - No domain set
+
+
+                           FILESYSTEM
+
+
+✔ Folder media found.
+✔ Folder var found.
+✔ Folder var/cache found.
+✔ Folder var/session found.
+✔ File app/etc/local.xml found.
+✔ File index.php.sample found.
+
+
+                              PHP
+
+
+✔ Required PHP Module simplexml found.
+✔ Required PHP Module mcrypt found.
+✔ Required PHP Module hash found.
+✔ Required PHP Module gd found.
+✔ Required PHP Module dom found.
+✔ Required PHP Module iconv found.
+✔ Required PHP Module curl found.
+✔ Required PHP Module soap found.
+✔ Required PHP Module pdo found.
+✔ Required PHP Module pdo_mysql found.
+✔ Bytecode Cache apc found.
+
+
+                            SECURITY
+
+
+✔ app/etc/local.xml cannot be accessed from outside.
+
+
+                             MYSQL
+
+
+✔ MySQL Version 5.6.21 found.
+✔ Required MySQL Storage Engine InnoDB found.
+Successfully installed magento
+
+n98-magerun.phar db:dump --root-dir="./build" sample_database.sql
+
+
+ Dump MySQL Database
+
+
+Start dumping database magento_demo to file sample_database.sql
+Finished
+
+
+bzip2 --best -z build/sample_database.sql
+mv build/sample_database.sql.bz2 prebuild/empty/database.sql.bz2
