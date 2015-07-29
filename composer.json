@@ -30,6 +30,7 @@
         }
     ],
     "require": {
+        "aydin-hassan/magento-core-composer-installer" : "~1.0",
         "magento-hackathon/magento-composer-installer": "@beta",
         "openmage/magento-lts": "dev-1.9.1"
     },
