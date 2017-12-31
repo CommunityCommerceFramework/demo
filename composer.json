@@ -15,7 +15,7 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/community-commerce-framework/core"
+            "url": "https://github.com/CommunityCommerceFramework/Core"
         }
     ],
     "require": {
