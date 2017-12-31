@@ -1,7 +1,7 @@
-Magento Demo
+Demo
 ============
 
-A Magento 1 Demo installable via composer
+A Demo installable via composer
 
 
 ## run Demo via the php builtin server
@@ -30,7 +30,7 @@ Using this dump still needs the media and skin data from the smaple archive.
 
 ***caution***  
 *the normal size of a cloud9 workspace is 512MB Ram and 1G Disk,
-that is enough for an empty magento instance, but may soon reach its limits.*
+that is enough for an empty instance, but may soon reach its limits.*
 
 
 add php.ini:  
@@ -66,7 +66,7 @@ source prebuild/empty/database.sql
 start Webserver:  
 right click on `build/index.php` and chose `run`. 
 
-install Magento:  
+install application:  
 use the MySql data as described on https://docs.c9.io/docs/setting-up-mysql  
 means database is c9, host is localhost, user your c9 username, password empty.
 

@@ -1,6 +1,6 @@
 {
-    "name": "openmage/magento-demo",
-    "description": "a Magento demo project",
+    "name": "community-commerce-framework/demo",
+    "description": "a demo project",
     "license": "MIT",
     "authors": [
         {
@@ -14,25 +14,14 @@
             "url": "https://github.com/AydinHassan/magento-core-composer-installer"
         },
         {
-            "type": "package",
-            "package": {
-                "name": "openmage/magento-lts",
-                "version": "dev-1.9.1",
-                "type": "magento-core",
-                "dist": {
-                    "url": "https://github.com/OpenMage/magento-lts/archive/1.9.1.zip",
-                    "type": "zip"
-                },
-                "autoload": {
-                    "classmap": []
-                }
-            }
+            "type": "vcs",
+            "url": "https://github.com/community-commerce-framework/core"
         }
     ],
     "require": {
         "aydin-hassan/magento-core-composer-installer" : "~1.0",
         "magento-hackathon/magento-composer-installer": "@beta",
-        "openmage/magento-lts": "dev-1.9.1"
+        "community-commerce-framework/core": "dev-master"
     },
     "extra": {
         "magento-root-dir": "build"
